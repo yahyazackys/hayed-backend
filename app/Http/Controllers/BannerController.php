@@ -14,7 +14,6 @@ class BannerController extends Controller
     {
         $banners = Banner::all();
         dd($banners);
-        dd($banners);
         return view('banner.index', compact('banners'));
     }
 
