@@ -9,7 +9,10 @@
     <h3>Komentar</h3>
     @foreach($forum->comments as $comment)
         <div style="margin-bottom: 20px;">
+<<<<<<< HEAD
         <p>danil anjg babi</p>
+=======
+>>>>>>> c1748c8 (terbaru)
             <p>{{ $comment->content }} - <small>{{ $comment->user->name }}</small></p>
             <form action="{{ route('comments-like', $comment->id) }}" method="POST" style="display:inline;">
                 @csrf

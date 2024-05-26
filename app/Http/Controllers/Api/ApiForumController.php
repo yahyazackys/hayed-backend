@@ -1,15 +1,29 @@
 <?php
 
+<<<<<<< HEAD
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+=======
+namespace App\Http\Controllers;
+
+>>>>>>> c1748c8 (terbaru)
 use App\Models\Comment;
 use App\Models\Forum;
 use App\Models\Like;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Validator;
 
 class ApiForumController extends Controller
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Validator;
+>>>>>>> 4d3a964c76536e0354e706d2c6ee8f1443b22110
+
+class ForumController extends Controller
+>>>>>>> c1748c8 (terbaru)
 {
     public function index()
     {
@@ -19,6 +33,22 @@ class ApiForumController extends Controller
 
     public function store(Request $request)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+        $forum = Forum::create([
+            'user_id' => auth()->user()->id,
+            'title' => $validatedData['title'],
+            'content' => $validatedData['content'],
+        ]);
+
+=======
+>>>>>>> c1748c8 (terbaru)
         $data = Comment::with(['user'])
             ->orderBy('created_at', 'ASC')
             ->get();
@@ -87,6 +117,10 @@ class ApiForumController extends Controller
             'content' => $request->content,
         ]);
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4d3a964c76536e0354e706d2c6ee8f1443b22110
+>>>>>>> c1748c8 (terbaru)
         return response()->json(['forum' => $forum], 201);
     }
 
@@ -129,3 +163,7 @@ class ApiForumController extends Controller
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c1748c8 (terbaru)

@@ -168,7 +168,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
         App\Providers\ViewComposerServiceProvider::class,
+=======
+>>>>>>> c1748c8 (terbaru)
     ])->toArray(),
 
     /*

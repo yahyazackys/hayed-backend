@@ -11,6 +11,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultantController;
 use App\Http\Controllers\BannerController;
+<<<<<<< HEAD
 use App\Http\Controllers\Frontend\ViewController;
 
 Route::get('/', [App\Http\Controllers\ViewController::class, 'index'])->name('home');
@@ -36,6 +37,23 @@ Route::get('/article', [App\Http\Controllers\ViewController::class, 'article'])-
 
 Auth::routes();
 
+=======
+
+
+Route::get('/', function () {
+    return redirect('login');
+});
+
+// Route::group(['middleware' => ['']], function () {
+
+Auth::routes();
+
+// Route::post('/post-registration', [RegisterController::class, 'postRegistration'])->name('register-post'); 
+// Route::post('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+// Route::post('/login', [App\Http\Controllers\LoginController::class, 'showLogin'])->name('showLogin');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+>>>>>>> c1748c8 (terbaru)
 Route::group(['middleware' => ['auth', 'admin']], function () {
     // User
     Route::get('/user', [UserController::class, 'index'])->name('user');
@@ -103,5 +121,15 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/forum/delete/{id}', [ForumController::class, 'delete'])->name('forum-delete');
     Route::post('/forum/{id}/comment-store', [ForumController::class, 'storeComment'])->name('comments-store');
     Route::post('/comments/{id}/like', [ForumController::class, 'likeComment'])->name('comments-like');
+<<<<<<< HEAD
+=======
+
+    // Forum
+    // Route::get('/forum', [ForumController::class, 'index'])->name('forum');
+    // Route::get('/forum/{id}', [ForumController::class, 'test'])->name('test');
+    // Route::post('/forum/store', [ForumController::class, 'store'])->name('forum-store');
+
+    // Route::post('/comment/store', [CommentController::class, 'store'])->name('comment-store');
+>>>>>>> c1748c8 (terbaru)
 });
 // });

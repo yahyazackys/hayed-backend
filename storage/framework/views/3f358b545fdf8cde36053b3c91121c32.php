@@ -63,6 +63,7 @@
                 </a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link  <?php echo e(request()->is('forum') || request()->is('forum/create') || request()->is('forum/edit/*') ? 'active' : ''); ?>"
                     href="<?php echo e(route('forum')); ?>">
                     <div
@@ -90,6 +91,8 @@
                 </a>
             </li>
             <li class="nav-item">
+=======
+>>>>>>> c1748c8 (terbaru)
                 <a class="nav-link  <?php echo e(request()->is('consultant') || request()->is('consultant/create') || request()->is('consultant/edit/*') ? 'active' : ''); ?>"
                     href="<?php echo e(route('consultant')); ?>">
                     <div

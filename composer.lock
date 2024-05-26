@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "051c2175b79d99cd72789b5e9c8b2d17",
     "packages": [
         {
@@ -113,6 +114,11 @@
             "time": "2024-02-26T17:29:56+00:00"
         },
         {
+=======
+    "content-hash": "b27c450f10bc722732026d74124016b3",
+    "packages": [
+        {
+>>>>>>> c1748c8 (terbaru)
             "name": "aws/aws-crt-php",
             "version": "v1.2.5",
             "source": {
@@ -459,6 +465,7 @@
             "time": "2023-11-30T22:41:32+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "blade-ui-kit/blade-heroicons",
             "version": "2.3.0",
             "source": {
@@ -674,6 +681,8 @@
             "time": "2024-02-29T17:57:14+00:00"
         },
         {
+=======
+>>>>>>> c1748c8 (terbaru)
             "name": "brick/math",
             "version": "0.12.1",
             "source": {
@@ -803,6 +812,7 @@
             "time": "2023-12-11T17:09:12+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "codeat3/blade-google-material-design-icons",
             "version": "1.19.0",
             "source": {
@@ -876,6 +886,8 @@
             "time": "2024-02-28T15:02:13+00:00"
         },
         {
+=======
+>>>>>>> c1748c8 (terbaru)
             "name": "defuse/php-encryption",
             "version": "v2.4.0",
             "source": {
@@ -4372,6 +4384,7 @@
             "time": "2024-03-23T07:42:40+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "mallardduck/blade-boxicons",
             "version": "2.4.0",
             "source": {
@@ -4448,6 +4461,8 @@
             "time": "2023-02-16T16:52:16+00:00"
         },
         {
+=======
+>>>>>>> c1748c8 (terbaru)
             "name": "monolog/monolog",
             "version": "3.6.0",
             "source": {
@@ -5092,6 +5107,7 @@
             "time": "2023-11-13T09:31:12+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "owenvoke/blade-fontawesome",
             "version": "v2.6.0",
             "source": {
@@ -5154,6 +5170,8 @@
             "time": "2024-02-27T16:15:55+00:00"
         },
         {
+=======
+>>>>>>> c1748c8 (terbaru)
             "name": "paragonie/constant_time_encoding",
             "version": "v2.7.0",
             "source": {
@@ -8853,6 +8871,7 @@
             "time": "2024-04-18T09:29:19+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "thecodingmachine/safe",
             "version": "v2.5.0",
             "source": {
@@ -8992,6 +9011,8 @@
             "time": "2023-04-05T11:54:14+00:00"
         },
         {
+=======
+>>>>>>> c1748c8 (terbaru)
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.2.7",
             "source": {
@@ -11708,5 +11729,9 @@
         "php": "^8.1"
     },
     "platform-dev": [],
+<<<<<<< HEAD
     "plugin-api-version": "2.2.0"
+=======
+    "plugin-api-version": "2.6.0"
+>>>>>>> c1748c8 (terbaru)
 }

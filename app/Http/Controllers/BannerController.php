@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1748c8 (terbaru)
     public function index()
     {
         $banners = Banner::all();
