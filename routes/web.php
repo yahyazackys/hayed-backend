@@ -11,21 +11,20 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultantController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\Frontend\ViewController;
 
+Route::get('/', [App\Http\Controllers\ViewController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return redirect('login');
-});
+// about us
+Route::get('/vision-mission-value', [App\Http\Controllers\ViewController::class, 'vision'])->name('vision-mission-value');
+Route::get('/konsultan', [App\Http\Controllers\ViewController::class, 'consultant'])->name('konsultan');
 
-// Route::group(['middleware' => ['']], function () {
+// service
+Route::get('/seminar', [App\Http\Controllers\ViewController::class, 'seminar'])->name('seminar');
+Route::get('/service/{id}', [App\Http\Controllers\ViewController::class, 'showService'])->name('service.show');
 
 Auth::routes();
 
-// Route::post('/post-registration', [RegisterController::class, 'postRegistration'])->name('register-post'); 
-// Route::post('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
-// Route::post('/login', [App\Http\Controllers\LoginController::class, 'showLogin'])->name('showLogin');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth', 'admin']], function () {
     // User
     Route::get('/user', [UserController::class, 'index'])->name('user');
@@ -93,12 +92,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/forum/delete/{id}', [ForumController::class, 'delete'])->name('forum-delete');
     Route::post('/forum/{id}/comment-store', [ForumController::class, 'storeComment'])->name('comments-store');
     Route::post('/comments/{id}/like', [ForumController::class, 'likeComment'])->name('comments-like');
-
-    // Forum
-    // Route::get('/forum', [ForumController::class, 'index'])->name('forum');
-    // Route::get('/forum/{id}', [ForumController::class, 'test'])->name('test');
-    // Route::post('/forum/store', [ForumController::class, 'store'])->name('forum-store');
-
-    // Route::post('/comment/store', [CommentController::class, 'store'])->name('comment-store');
 });
 // });
