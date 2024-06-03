@@ -6,7 +6,7 @@
         <div>
             
             <h2><a href="{{ route('forum-show', $forum->id) }}">{{ $forum->title }}</a></h2>
-            <p>{{ $forum->content }}</p>
+            <p>{{ $forum->content }}</p>yahya
         </div>
     @endforeach
 @endsection
