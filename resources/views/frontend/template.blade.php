@@ -14,9 +14,15 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+
+    {{-- Raleway Font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="w-full h-full bg-white">
+<body class="w-full h-full bg-white font-raleway">
     <nav class="bg-white shadow-md border-gray-200 fixed top-0 w-full z-50 py-6">
         <div class="max-w-screen-xl flex items-center justify-between mx-auto px-4">
             <!-- Logo -->
@@ -88,21 +94,32 @@
                                     <div id="doubleDropdown"
                                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="doubleDropdownButton">
-                                            @foreach ($servis as $service)
-                                                <li>
-                                                    <a href="{{ route('service.show', $service->id) }}"
-                                                        class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">{{ $service->servis }}</a>
-                                                </li>
-                                            @endforeach
+                                            <li>
+                                                <a href="{{ route('service.accounting') }}"
+                                                    class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Accounting</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('service.auditing') }}"
+                                                    class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Auditing</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('service.advisory') }}"
+                                                    class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Business
+                                                    Advisory</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('service.business') }}"
+                                                    class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Business
+                                                    Training</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('service.tax') }}"
+                                                    class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Taxation</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
                             </ul>
-                            {{-- <div class="py-1">
-                                <a href="#"
-                                    class="text-lg block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-                                    out</a>
-                            </div> --}}
                         </div>
                     </li>
                     <li>
@@ -118,12 +135,12 @@
                             class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow">
                             <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="#"
+                                    <a href="{{ route('career.job-vacancy') }}"
                                         class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Lowongan
                                         Pekerjaan</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="{{ route('career.program-activity') }}"
                                         class="block px-4 py-2 hover:bg-gray-100 text-black text-[16px]">Program dan
                                         Kegiatan</a>
                                 </li>
@@ -131,7 +148,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('article') }}"
                             class="text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Artikel</a>
                     </li>
                     <li>

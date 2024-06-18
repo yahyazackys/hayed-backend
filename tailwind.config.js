@@ -13,6 +13,11 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
+    extend: {
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     require('daisyui'),

@@ -21,7 +21,18 @@ Route::get('/konsultan', [App\Http\Controllers\ViewController::class, 'consultan
 
 // service
 Route::get('/seminar', [App\Http\Controllers\ViewController::class, 'seminar'])->name('seminar');
-Route::get('/service/{id}', [App\Http\Controllers\ViewController::class, 'showService'])->name('service.show');
+Route::get('/service/accounting', [App\Http\Controllers\ViewController::class, 'accountingService'])->name('service.accounting');
+Route::get('/service/auditing', [App\Http\Controllers\ViewController::class, 'auditingService'])->name('service.auditing');
+Route::get('/service/advisory', [App\Http\Controllers\ViewController::class, 'advisoryService'])->name('service.advisory');
+Route::get('/service/business', [App\Http\Controllers\ViewController::class, 'businessService'])->name('service.business');
+Route::get('/service/tax', [App\Http\Controllers\ViewController::class, 'taxService'])->name('service.tax');
+
+// career
+Route::get('/career/job-vacancy', [App\Http\Controllers\ViewController::class, 'jobVacancyCareer'])->name('career.job-vacancy');
+Route::get('/career/program-activity', [App\Http\Controllers\ViewController::class, 'programCareer'])->name('career.program-activity');
+
+// article
+Route::get('/article', [App\Http\Controllers\ViewController::class, 'article'])->name('article');
 
 Auth::routes();
 

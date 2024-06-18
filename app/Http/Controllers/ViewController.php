@@ -204,14 +204,60 @@ class ViewController extends Controller
         return view('frontend.service.seminar', compact('previous'));
     }
 
-    public function showService($id)
+    public function accountingService()
     {
-        $service = Service::find($id);
+        return view('frontend.service.accounting');
+    }
 
-        if (!$service) {
-            abort(404, 'Service not found');
-        }
+    public function auditingService()
+    {
+        return view('frontend.service.auditing');
+    }
+    public function advisoryService()
+    {
+        return view('frontend.service.advisory');
+    }
+    public function businessService()
+    {
+        return view('frontend.service.business');
+    }
+    public function taxService()
+    {
+        return view('frontend.service.tax');
+    }
+    public function jobVacancyCareer()
+    {
+        return view('frontend.career.job-vacancy');
+    }
+    public function programCareer()
+    {
+        $faqs = [
+            [
+                'question' => 'Click to open this one and close others',
+                'answer' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
+            ],
+            [
+                'question' => 'Click to open this one and close others',
+                'answer' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
+            ],
+            [
+                'question' => 'Click to open this one and close others',
+                'answer' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
+            ],
+            [
+                'question' => 'Click to open this one and close others',
+                'answer' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
+            ],
+            [
+                'question' => 'Click to open this one and close others',
+                'answer' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
+            ],
+        ];
 
-        return view('frontend.service.service', compact('service'));
+        return view('frontend.career.program-activity', compact('faqs'));
+    }
+    public function article()
+    {
+        return view('frontend.article');
     }
 }

@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Comment;
 use App\Models\Forum;
 use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class ForumController extends Controller
+class ApiForumController extends Controller
 {
     public function index()
     {

@@ -28,10 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/komentar/{id}/submit', [ApiForumController::class, 'createComment']);
 });
 
-Route::get('/forum', [ApiForumController::class, 'getAllForum']);
-Route::get('/forum/{id}/detail', [ApiForumController::class, 'detailForum']);
-Route::get('/komentar', [ApiForumController::class, 'getAllComment']);
-
 // Api Job
 Route::get('/lowongan-pekerjaan', [ApiJobController::class, 'getAllJob']);
 
@@ -52,9 +48,13 @@ Route::get('/berita/search', [ApiNewController::class, 'searchNew']);
 Route::get('/consultant', [ApiConsultantController::class, 'getAllConsultant']);
 Route::get('/consultant/{id}/detail', [ApiConsultantController::class, 'detailConsultant']);
 
+
+Route::get('/forum', [ApiForumController::class, 'getAllForum']);
+Route::get('/forum/{id}/detail', [ApiForumController::class, 'detailForum']);
+Route::get('/komentar', [ApiForumController::class, 'getAllComment']);
 // forum
-Route::get('/forums', [ForumController::class, 'index'])->name('api.forums.index');
-Route::post('/forums', [ForumController::class, 'store'])->name('api.forums.store');
-Route::get('/forums/{id}', [ForumController::class, 'show'])->name('api.forums.show');
-Route::post('/forums/{forumId}/comments', [ForumController::class, 'storeComment'])->name('api.forums.comments.store');
-Route::post('/comments/{commentId}/like', [ForumController::class, 'likeComment'])->name('api.comments.like');
+Route::get('/forums', [ApiForumController::class, 'index'])->name('api.forums.index');
+Route::post('/forums', [ApiForumController::class, 'store'])->name('api.forums.store');
+Route::get('/forums/{id}', [ApiForumController::class, 'show'])->name('api.forums.show');
+Route::post('/forums/{forumId}/comments', [ApiForumController::class, 'storeComment'])->name('api.forums.comments.store');
+Route::post('/comments/{commentId}/like', [ApiForumController::class, 'likeComment'])->name('api.comments.like');
