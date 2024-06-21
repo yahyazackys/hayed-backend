@@ -70,5 +70,4 @@ class FrontendController extends Controller
         $banners = Banner::orderBy('created_at', 'desc')->take(3)->get();
         return view('frontend.home', compact('banners'));
     }
-    
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Banner;
 
 class ViewController extends Controller
 {
@@ -98,7 +99,9 @@ class ViewController extends Controller
             ],
         ];
 
-        return view('frontend.home', compact('services', 'news', 'faqs'));
+        $banners = Banner::orderBy('created_at', 'desc')->take(3)->get();
+
+        return view('frontend.home', compact('services', 'news', 'faqs', 'banners'));
     }
 
     public function vision()

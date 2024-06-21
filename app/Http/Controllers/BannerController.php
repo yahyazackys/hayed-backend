@@ -28,11 +28,12 @@ class BannerController extends Controller
         $request->validate([
             'judul' => 'required|min:5',
             'keterangan' => 'required',
-            'gambar' => 'required|image|file|max:2048',
+            'gambar' => 'required|image|file|max:5048|mimes:jpg,jpeg,png,bmp,gif,svg',
         ], [
             'judul.required' => 'Judul harus diisi!',
             'keterangan.required' => 'Keterangan harus diisi!',
             'gambar.required' => 'Gambar harus diisi!',
+            'gambar.mimes' => 'Gambar harus berupa file bertipe: jpg, jpeg, png, bmp, gif, atau svg!',
         ]);
 
         try {

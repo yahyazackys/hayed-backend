@@ -5,7 +5,7 @@
         <!-- Added padding-top to offset the fixed navbar -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide relative">
+            {{-- <div class="swiper-slide relative">
                 <img src="{{ asset('assets/frontend-image/bg.png') }}" class="w-full h-full object-cover" alt="Slide 1">
                 <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div> <!-- Overlay -->
                 <div
@@ -14,7 +14,18 @@
                         Terbaik</span>
                     <span class="text-white text-2xl font-extralight">Kami Siap Untuk Membantu Anda!</span>
                 </div>
-            </div>
+            </div> --}}
+            @foreach ($banners as $banner)
+                <div class="swiper-slide relative">
+                    <img src="{{ asset('assets/frontend-image/bg.png') }}" class="w-full h-full object-cover" alt="Slide 1">
+                    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div> <!-- Overlay -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-full flex items-start justify-center mt-16 mx-28 pb-20 flex-col z-10 gap-y-4 max-w-[70%]">
+                        <span class="text-white text-5xl font-semibold">{{ $banner->judul }}</span>
+                        <span class="text-white text-2xl font-extralight">{{ $banner->keterangan }}</span>
+                    </div>
+                </div>
+            @endforeach
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>

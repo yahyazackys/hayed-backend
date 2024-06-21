@@ -12,6 +12,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultantController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', [App\Http\Controllers\ViewController::class, 'index'])->name('home');
 
@@ -38,11 +39,13 @@ Route::get('/new-new', [FrontendController::class, 'getNewNew'])->name('news.new
 Route::get('/breaking-new', [FrontendController::class, 'getBreakingNew'])->name('news.breaking');
 
 // Banner
-Route::get('/get-banner', [FrontendController::class, 'getbanner'])->name('getbanner'); 
+Route::get('/get-banner', [FrontendController::class, 'getbanner'])->name('getbanner');
 
 Auth::routes();
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+
     // User
     Route::get('/user', [UserController::class, 'index'])->name('user');
     Route::get('/user/create', [UserController::class, 'create'])->name('user-create');
