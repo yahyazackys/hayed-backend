@@ -5,12 +5,6 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-<<<<<<< HEAD
-ini_set('max_execution_time', '120'); // Set to 120 seconds
-ini_set('max_input_time', '120');
-
-=======
->>>>>>> c1748c8 (terbaru)
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
@@ -22,11 +16,9 @@ ini_set('max_input_time', '120');
 |
 */
 
-<<<<<<< HEAD
+// dada
+
 if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php')) {
-=======
-if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
->>>>>>> c1748c8 (terbaru)
     require $maintenance;
 }
 
@@ -41,11 +33,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-<<<<<<< HEAD
 require __DIR__ . '/../vendor/autoload.php';
-=======
-require __DIR__.'/../vendor/autoload.php';
->>>>>>> c1748c8 (terbaru)
 
 /*
 |--------------------------------------------------------------------------
@@ -58,11 +46,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-<<<<<<< HEAD
 $app = require_once __DIR__ . '/../bootstrap/app.php';
-=======
-$app = require_once __DIR__.'/../bootstrap/app.php';
->>>>>>> c1748c8 (terbaru)
 
 $kernel = $app->make(Kernel::class);
 
