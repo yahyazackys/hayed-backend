@@ -44,46 +44,46 @@
                 OUR SERVICES
             </h2>
             <div class="flex flex-row mt-8 justify-between">
-                <a href="#" class="p-6 flex flex-col items-center gap-y-4">
+                <div class="p-6 flex flex-col items-center gap-y-4">
                     <img src="{{ asset('assets/frontend-image/value-image/solution.png') }}" class="w-24 h-24 object-cover"
                         alt="}" />
                     <h5 class="text-2xl font-bold tracking-tight text-black text-center">
                         Solution</h5>
                     <p class="font-normal text-black text-center text-sm">Our consultants have a good level of knowledge
                         and have broad insights</p>
-                </a>
-                <a href="#" class="p-6 flex flex-col items-center gap-y-4">
+                </div>
+                <div class="p-6 flex flex-col items-center gap-y-4">
                     <img src="{{ asset('assets/frontend-image/value-image/manageable.png') }}"
                         class="w-24 h-24 object-cover" alt="}" />
                     <h5 class="text-2xl font-bold tracking-tight text-black text-center">
                         Manageable</h5>
                     <p class="font-normal text-black text-center text-sm">Our consultants have a good level of knowledge and
                         have broad insights</p>
-                </a>
-                <a href="#" class="p-6 flex flex-col items-center gap-y-4">
+                </div>
+                <div class="p-6 flex flex-col items-center gap-y-4">
                     <img src="{{ asset('assets/frontend-image/value-image/accountable.png') }}"
                         class="w-24 h-24 object-cover" alt="}" />
                     <h5 class="text-2xl font-bold tracking-tight text-black text-center">
                         Accountable</h5>
                     <p class="font-normal text-black text-center text-sm">Our consultants have a good level of knowledge
                         and have broad insights</p>
-                </a>
-                <a href="#" class="p-6 flex flex-col items-center gap-y-4">
+                </div>
+                <div class="p-6 flex flex-col items-center gap-y-4">
                     <img src="{{ asset('assets/frontend-image/value-image/responsive.png') }}"
                         class="w-24 h-24 object-cover" alt="}" />
                     <h5 class="text-2xl font-bold tracking-tight text-black text-center">
                         Responsive</h5>
                     <p class="font-normal text-black text-center text-sm">Our consultants have a good level of knowledge
                         and have broad insights</p>
-                </a>
-                <a href="#" class="p-6 flex flex-col items-center gap-y-4">
+                </div>
+                <div class="p-6 flex flex-col items-center gap-y-4">
                     <img src="{{ asset('assets/frontend-image/value-image/trust.png') }}" class="w-24 h-24 object-cover"
                         alt="}" />
                     <h5 class="text-2xl font-bold tracking-tight text-black text-center">
                         Trust</h5>
                     <p class="font-normal text-black text-center text-sm">Our consultants have a good level of knowledge
                         and have broad insights</p>
-                </a>
+                </div>
 
             </div>
         </div>

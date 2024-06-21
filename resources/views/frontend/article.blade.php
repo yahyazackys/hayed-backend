@@ -58,7 +58,7 @@
     <div id="breaking-news" class="w-full flex items-center px-40 py-16">
         <div class="flex flex-col w-full">
             <h2 class="text-3xl font-semibold text-start text-black">
-                Breaking News!
+                Berita Hangat
             </h2>
             <div class="flex flex-row mt-8 justify-between">
                 <a href="#"
@@ -120,8 +120,8 @@
     </div>
 
     <div class="flex w-full px-40 py-16 justify-between">
-        <div class="flex flex-col max-w-[650px]">
-            <div class="flex justify-between w-full mb-8">
+        <div id="beritaterbaru" class="flex flex-col max-w-[650px]">
+            <div class="flex justify-between w-full mb-8 items-center">
                 <h2 class="text-3xl font-semibold text-start text-black">Berita Terbaru</h2>
                 <div class="relative">
                     <div id="categoryDropdown" class="flex gap-x-2 items-center cursor-pointer group">
@@ -165,24 +165,104 @@
                 </a>
             </div>
         </div>
-        <div class="flex flex-col w-[40%]">
-            <div class="flex justify-between w-full mb-8">
-                <h2 class="text-3xl font-semibold text-start text-black">Berita Teratas</h2>
-                <div class="relative">
-                    <div id="categoryDropdown" class="flex gap-x-2 items-center cursor-pointer group">
-                        <img src="{{ asset('assets/frontend-image/sort.png') }}" class="w-5" alt="">
-                        <p id="categoryText" class="text-black font-medium text-[13px] group-hover:text-[#21409A]">
-                            Category
-                        </p>
-                    </div>
-                    <div id="categoryList"
-                        class="absolute bg-white shadow-xl mt-1 py-2 hidden text-[13px] text-black w-full">
-                        <p class="cursor-pointer hover:bg-gray-100 px-2 py-1">Akuntansi</p>
-                        <p class="cursor-pointer hover:bg-gray-100 px-2 py-1">Audit</p>
-                        <p class="cursor-pointer hover:bg-gray-100 px-2 py-1">Penasihat Bisnis</p>
-                        <p class="cursor-pointer hover:bg-gray-100 px-2 py-1">Pelatihan Bisnis</p>
-                        <p class="cursor-pointer hover:bg-gray-100 px-2 py-1">Perpajakan</p>
-                    </div>
+        <div id="beritateratas" class="flex flex-col w-[40%]">
+            <h2 class="text-3xl font-semibold text-start text-black mb-8">Berita Teratas</h2>
+            <div class="flex flex-col w-full bg-white p-8 rounded-xl shadow-md shadow-slate-200">
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
+                </div>
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
+                </div>
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
+                </div>
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
+                </div>
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
+                </div>
+                <div class="flex flex-col">
+                    <a href="" class="flex w-full text-black group gap-x-4">
+                        <div class="w-40">
+                            <img src="{{ asset('assets/frontend-image/article-feed.svg') }}" class="object-contain"
+                                alt="">
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-center gap-y-4">
+                            <p class="text-[16px] group-hover:text-[#21409A]">Indonesdadaaian Oil Stocks Rise Drastically
+                                in
+                                2023
+                            </p>
+                            <p class="text-[11px] font-light">44 minute ago</p>
+                        </div>
+                    </a>
+                    <hr class="my-5 border-black">
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
 export default {
   content: [
     "./resources/**/*.blade.php",
@@ -24,15 +23,3 @@ export default {
     require('daisyui'),
   ],
 }
-=======
-module.exports = {
-  content: [
-    './resources/views/**/*.blade.php',
-    './resources/js/**/*.js',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
->>>>>>> c60550a (yahyababi)
