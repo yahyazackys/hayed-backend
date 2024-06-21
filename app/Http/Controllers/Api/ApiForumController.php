@@ -13,14 +13,18 @@ use App\Models\Forum;
 use App\Models\Like;
 use Illuminate\Http\Request;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Validator;
 
 class ApiForumController extends Controller
 =======
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 11e665f (pppp)
 use Illuminate\Support\Facades\Validator;
->>>>>>> 4d3a964c76536e0354e706d2c6ee8f1443b22110
+
 
 class ForumController extends Controller
 >>>>>>> c1748c8 (terbaru)
@@ -34,8 +38,12 @@ class ForumController extends Controller
     public function store(Request $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 11e665f (pppp)
         $validatedData = $request->validate([
             'title' => 'required',
             'content' => 'required',
@@ -46,9 +54,12 @@ class ForumController extends Controller
             'title' => $validatedData['title'],
             'content' => $validatedData['content'],
         ]);
+<<<<<<< HEAD
 
 =======
 >>>>>>> c1748c8 (terbaru)
+=======
+>>>>>>> 11e665f (pppp)
         $data = Comment::with(['user'])
             ->orderBy('created_at', 'ASC')
             ->get();
@@ -118,9 +129,12 @@ class ForumController extends Controller
         ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4d3a964c76536e0354e706d2c6ee8f1443b22110
 >>>>>>> c1748c8 (terbaru)
+=======
+>>>>>>> 11e665f (pppp)
         return response()->json(['forum' => $forum], 201);
     }
 

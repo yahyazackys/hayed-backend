@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients ipangit</p>
                                     <h5 class="font-weight-bolder mb-0">
                                         +3,462
                                         <span class="text-danger text-sm font-weight-bolder">-2%</span>
