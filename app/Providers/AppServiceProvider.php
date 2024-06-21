@@ -21,8 +21,4 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c1748c8 (terbaru)
