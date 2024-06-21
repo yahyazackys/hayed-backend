@@ -17,11 +17,8 @@ class ApiNewController extends Controller
             ->where('status', '1')
             ->orderBy('judul', 'ASC')
             ->get();
-<<<<<<< HEAD
+// dd($data);
 
-=======
-dd($data);
->>>>>>> c1748c8 (terbaru)
         // tampilkan responsenya
         // menggunakan format json
         return response()->json(
