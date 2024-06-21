@@ -37,6 +37,9 @@ Route::get('/all-new', [FrontendController::class, 'getAllNew'])->name('news.all
 Route::get('/new-new', [FrontendController::class, 'getNewNew'])->name('news.new');
 Route::get('/breaking-new', [FrontendController::class, 'getBreakingNew'])->name('news.breaking');
 
+// Banner
+Route::get('/get-banner', [FrontendController::class, 'getbanner'])->name('getbanner'); 
+
 Auth::routes();
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
