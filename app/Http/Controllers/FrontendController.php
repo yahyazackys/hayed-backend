@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Event;
 use App\Models\News;
 use Illuminate\Http\Request;
@@ -62,4 +63,12 @@ class FrontendController extends Controller
 
         return view('event.index', ['events' => $events]);
     }
+
+    // banner
+    public function index()
+    {
+        $banners = Banner::orderBy('created_at', 'desc')->take(3)->get();
+        return view('frontend.home', compact('banners'));
+    }
+    
 }
