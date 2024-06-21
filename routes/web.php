@@ -33,6 +33,9 @@ Route::get('/career/program-activity', [App\Http\Controllers\ViewController::cla
 
 // article
 Route::get('/article', [App\Http\Controllers\ViewController::class, 'article'])->name('article');
+Route::get('/all-new', [FrontendController::class, 'getAllNew'])->name('news.all');
+Route::get('/new-new', [FrontendController::class, 'getNewNew'])->name('news.new');
+Route::get('/breaking-new', [FrontendController::class, 'getBreakingNew'])->name('news.breaking');
 
 Auth::routes();
 
@@ -103,9 +106,4 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/forum/delete/{id}', [ForumController::class, 'delete'])->name('forum-delete');
     Route::post('/forum/{id}/comment-store', [ForumController::class, 'storeComment'])->name('comments-store');
     Route::post('/comments/{id}/like', [ForumController::class, 'likeComment'])->name('comments-like');
-
-    // Frontend
-    Route::get('/all-new', [FrontendController::class, 'getAllNew'])->name('news.all');
-    Route::get('/new-new', [FrontendController::class, 'getNewNew'])->name('news.new');
-    Route::get('/breaking-new', [FrontendController::class, 'getBreakingNew'])->name('news.breaking');
 });
