@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -18,9 +17,6 @@ const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
-=======
-import 'bootstrap';
->>>>>>> 46389acda79e774baeaf67e19d3503d41c14cdad
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
