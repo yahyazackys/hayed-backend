@@ -8,10 +8,7 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
-<<<<<<< HEAD
                 'resources/css/app.css',
-=======
->>>>>>> c1748c8 (terbaru)
             ],
             refresh: true,
         }),

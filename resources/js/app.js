@@ -7,10 +7,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c1748c8 (terbaru)
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready

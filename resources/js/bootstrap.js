@@ -7,10 +7,6 @@ import 'bootstrap';
  */
 
 import axios from 'axios';
-<<<<<<< HEAD
-
-=======
->>>>>>> c1748c8 (terbaru)
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
