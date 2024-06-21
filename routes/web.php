@@ -11,6 +11,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultantController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\FrontendController;
 
 Route::get('/', [App\Http\Controllers\ViewController::class, 'index'])->name('home');
 
@@ -102,4 +103,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/forum/delete/{id}', [ForumController::class, 'delete'])->name('forum-delete');
     Route::post('/forum/{id}/comment-store', [ForumController::class, 'storeComment'])->name('comments-store');
     Route::post('/comments/{id}/like', [ForumController::class, 'likeComment'])->name('comments-like');
+
+    // Frontend
+    Route::get('/all-new', [FrontendController::class, 'getAllNew'])->name('news.all');
+    Route::get('/new-new', [FrontendController::class, 'getNewNew'])->name('news.new');
+    Route::get('/breaking-new', [FrontendController::class, 'getBreakingNew'])->name('news.breaking');
 });
