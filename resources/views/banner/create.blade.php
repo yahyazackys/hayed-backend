@@ -11,7 +11,7 @@
                             <a href="{{ route('banner') }}" class="btn btn-sm btn-primary">Kembali</a>
                         </p>
                         @if ($errors->any())
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger text-white">
                                 <strong>Whoops!</strong> There were some problems with your
                                 input.<br><br>
                                 <ul>

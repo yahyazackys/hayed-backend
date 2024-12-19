@@ -44,7 +44,7 @@ Route::get('/get-banner', [FrontendController::class, 'getbanner'])->name('getba
 Auth::routes();
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home-admin');
 
     // User
     Route::get('/user', [UserController::class, 'index'])->name('user');

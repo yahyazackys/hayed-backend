@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
 use App\Models\Banner;
+use App\Models\News;
+use App\Models\Consultant;
 
 class ViewController extends Controller
 {
@@ -35,24 +36,6 @@ class ViewController extends Controller
                 'image' => 'assets/frontend-image/service-image/tax.png',
                 'title' => 'Business Training',
                 'description' => 'Business training is a process of exploring the abilities/potential of individuals by asking questions to get the goals to be achieved.',
-            ],
-        ];
-
-        $news = [
-            [
-                'image' => 'assets/frontend-image/new.png',
-                'title' => 'Accounting Service',
-                'description' => 'Accounting services are a process for preparing and preparing financial reports that begin with data collection/proof of transactions/invoices/recap records which are processed into financial reports.',
-            ],
-            [
-                'image' => 'assets/frontend-image/new.png',
-                'title' => 'Auditing & Assurance',
-                'description' => 'Audit and assurance is the process of verifying the records available in a company\'s accounting records according to accounting standards and principles, It also confirms whether the accounting records are accurate.',
-            ],
-            [
-                'image' => 'assets/frontend-image/new.png',
-                'title' => 'Tax Service',
-                'description' => 'Service tax is a tax collected by the government. In Indonesia it is generally 10% of your total bill. The bill includes food, drinks and other services such as ambiance.',
             ],
         ];
 
@@ -101,6 +84,13 @@ class ViewController extends Controller
 
         $banners = Banner::orderBy('created_at', 'desc')->take(3)->get();
 
+        $news = News::with(['services'])
+            ->where('status', '1')
+            ->where('berita_hangat', '1')
+            ->limit(3)
+            ->orderBy('created_at', 'DESC')
+            ->get();
+
         return view('frontend.home', compact('services', 'news', 'faqs', 'banners'));
     }
 
@@ -111,58 +101,60 @@ class ViewController extends Controller
 
     public function consultant()
     {
-        $consultants = [
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Akdadada',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-            [
-                'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
-                'name' => 'Edwin Frymaruwah, S.E., M.Ak',
-                'job' => 'Consultant Bussiness',
-            ],
-        ];
+        // $consultants = [
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Akdadada',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        //     [
+        //         'image' => 'assets/frontend-image/consultant-image/edwin.jpg',
+        //         'name' => 'Edwin Frymaruwah, S.E., M.Ak',
+        //         'job' => 'Consultant Bussiness',
+        //     ],
+        // ];
+
+        $consultants = Consultant::all();
 
         return view('frontend.aboutUs.consultant', compact('consultants'));
     }

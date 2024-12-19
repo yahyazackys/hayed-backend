@@ -3,18 +3,16 @@
         <!-- Added padding-top to offset the fixed navbar -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            
-            <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="swiper-slide relative">
-                    <img src="<?php echo e(asset('assets/frontend-image/bg.png')); ?>" class="w-full h-full object-cover" alt="Slide 1">
-                    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div> <!-- Overlay -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-full flex items-start justify-center mt-16 mx-28 pb-20 flex-col z-10 gap-y-4 max-w-[70%]">
-                        <span class="text-white text-5xl font-semibold"><?php echo e($banner->judul); ?></span>
-                        <span class="text-white text-2xl font-extralight"><?php echo e($banner->keterangan); ?></span>
-                    </div>
+            <div class="swiper-slide relative">
+                <img src="<?php echo e(asset('assets/frontend-image/bg.png')); ?>" class="w-full h-full object-cover" alt="Slide 1">
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div> <!-- Overlay -->
+                <div
+                    class="absolute top-0 left-0 w-full h-full flex items-start justify-center mt-16 mx-28 pb-20 flex-col z-10 gap-y-4 max-w-[70%]">
+                    <span class="text-white text-5xl font-semibold">Bergabung Bersama Kami, dan Buat Bisnis Anda Menjadi Yang
+                        Terbaik</span>
+                    <span class="text-white text-2xl font-extralight">Kami Siap Untuk Membantu Anda!</span>
                 </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>

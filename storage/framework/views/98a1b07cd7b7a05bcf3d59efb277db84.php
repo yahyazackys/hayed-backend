@@ -1,7 +1,9 @@
 <?php $__env->startSection('content'); ?>
-    <div class="relative w-full h-screen">
-        <img src="<?php echo e(asset('assets/frontend-image/service-image/accounting-bg.png')); ?>" class="absolute h-full -z-0"
-            alt="">
+    <div class="relative w-full h-screen bg-cover bg-center"
+        style="background-image: url('<?php echo e(asset('assets/frontend-image/service-image/accounting-bg.png')); ?>');">
+        <div
+            class="absolute inset-0 bg-black opacity-50 rounded-lg transition-opacity duration-100 ease-in-out group-hover:opacity-70">
+        </div>
         <div class="relative flex flex-col h-screen justify-center px-40 text-white w-2/3 gap-y-3">
             <h2 class="text-5xl font-bold">Bingung cara membuat laporan keuangan?</h2>
             <p class="text-xl font-normal">Kami Selalu Siap Membantumu</p>

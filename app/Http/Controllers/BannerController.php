@@ -28,7 +28,7 @@ class BannerController extends Controller
         $request->validate([
             'judul' => 'required|min:5',
             'keterangan' => 'required',
-            'gambar' => 'required|image|file|max:5048|mimes:jpg,jpeg,png,bmp,gif,svg',
+            'gambar' => 'required|image|file|max:7048|mimes:jpg,jpeg,png,bmp,gif,svg',
         ], [
             'judul.required' => 'Judul harus diisi!',
             'keterangan.required' => 'Keterangan harus diisi!',

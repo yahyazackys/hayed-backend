@@ -91,7 +91,7 @@ class ApiUserController extends Controller
             $user = User::where('id', $userId)->first();
 
             $token = $user->createToken('auth_token')->plainTextToken;
-            $cookie = cookie('token', $token, 60 * 1);
+            $cookie = cookie('token', $token, 30 * 1);
 
             // menggunakan format json
             return response()->json(
